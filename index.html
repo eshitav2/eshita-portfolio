@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Eshita — Playground (mandala)</title>
-<meta name="description" content="Eshita, product designer in Bengaluru. A playful portfolio playground.">
+<title>Eshita Gupta — Product Designer, Bengaluru</title>
+<meta name="description" content="Eshita Gupta, product designer in Bengaluru. I design AI workflows that quietly fix everyday problems for tech teams.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-20 -20 40 40'%3E%3Cg fill='%23E63B2E'%3E%3Cellipse rx='5' ry='11' cy='-9'/%3E%3Cellipse rx='5' ry='11' cy='-9' transform='rotate(60)'/%3E%3Cellipse rx='5' ry='11' cy='-9' transform='rotate(120)'/%3E%3Cellipse rx='5' ry='11' cy='-9' transform='rotate(180)'/%3E%3Cellipse rx='5' ry='11' cy='-9' transform='rotate(240)'/%3E%3Cellipse rx='5' ry='11' cy='-9' transform='rotate(300)'/%3E%3C/g%3E%3Ccircle r='4.5' fill='%23FBF4E6'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Eshita — Playground">
-<meta property="og:description" content="A product designer’s playground. Drag things around, tap a place, play the sargam.">
+<meta property="og:title" content="Eshita Gupta — Product Designer, Bengaluru">
+<meta property="og:description" content="Tap a petal, hear a note, read what that place taught me.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Space+Grotesk:wght@500;700&family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
@@ -159,7 +159,7 @@ h1 em{font-style:italic;font-weight:600;background:linear-gradient(transparent 6
   .meta button{padding:10px 8px;font-size:13px}
   .sticker{-webkit-touch-callout:none}
 }
-@media (max-width:600px){html{scroll-snap-type:y proximity}.stage,.work,.shelf,.case{scroll-snap-align:start}.work{min-height:100svh;display:flex;flex-direction:column;justify-content:center}}
+@media (max-width:600px){html{scroll-snap-type:y proximity}.stage,.about,.work,.shelf,.contact,.case{scroll-snap-align:start}.work{min-height:100svh;display:flex;flex-direction:column;justify-content:center}}
 .toast{opacity:0;transform:translate(-50%,-250%)}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 .refresh{top:auto;bottom:calc(20px + env(safe-area-inset-bottom,0px));right:22px;width:32px;height:32px;border:0;background:transparent;color:var(--muted);opacity:.65}
@@ -182,7 +182,7 @@ h1 em{font-style:italic;font-weight:600;background:linear-gradient(transparent 6
 @keyframes fadein{from{opacity:0}}
 @keyframes sweep{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
 h1{font-size:clamp(40px,7.5vw,96px)}
-@media (max-width:600px){h1{font-size:clamp(38px,12vw,56px)}}
+@media (max-width:600px){h1{font-size:clamp(34px,10.4vw,50px)}}
 @media (prefers-reduced-motion:reduce){.mandala svg{animation:none}}
 .shelf{max-width:900px;margin:0 auto;padding:90px 24px 60px}
 .shelf h2{font-family:"Fraunces",serif;font-size:clamp(30px,5vw,52px);margin:0 0 6px;letter-spacing:-.02em}
@@ -346,6 +346,82 @@ h1{font-size:clamp(40px,7.5vw,96px)}
 .csm a:focus-visible,.csm button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 @media (max-width:600px){.csm{font-size:16px}.cs-band{padding:56px 0}.cs-hero{padding:32px 0 48px}.cs-bartitle{display:none}}
 @media (prefers-reduced-motion:reduce){.csm *{animation:none!important;transition:none!important}.cs-chip,.cs-formula .cs-eq{opacity:1;transform:none}}
+/* about + contact */
+.about{max-width:760px;margin:0 auto;padding:90px 24px 30px}
+.ab-k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.about h2{font-family:"Fraunces",serif;font-size:clamp(30px,5vw,52px);margin:8px 0 18px;letter-spacing:-.02em}
+.about p{font-size:clamp(16px,2vw,19px);line-height:1.65;margin:0 0 14px;max-width:62ch}
+.ab-path{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:26px;font-size:14px;font-weight:500}
+.ab-path span{border:1px solid color-mix(in srgb,var(--ink) 18%,transparent);border-radius:999px;padding:7px 13px;background:var(--card)}
+.ab-path i{font-style:normal;color:var(--muted)}
+.contact{max-width:760px;margin:0 auto;padding:60px 24px 110px}
+.contact h2{font-family:"Fraunces",serif;font-size:clamp(34px,6vw,64px);margin:0 0 10px;letter-spacing:-.02em}
+.contact p{color:var(--muted);line-height:1.6;max-width:56ch;margin:0 0 6px}
+.ct-row{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 18px}
+.ct-main{background:var(--accent);color:var(--on-accent);border-radius:999px;padding:14px 24px;font-weight:700;text-decoration:none;transition:transform .15s}
+.ct-main:hover{transform:translateY(-1px)}
+.ct-sec{border:1.5px solid color-mix(in srgb,var(--ink) 22%,transparent);background:var(--card);color:var(--ink);border-radius:999px;padding:13px 22px;font-weight:600;text-decoration:none}
+.ct-sec:hover{border-color:var(--ink)}
+.ct-links a{color:var(--ink)}
+.ct-foot{margin-top:46px!important;font-size:13px}
+@media (max-width:600px){.about{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:70px 22px 40px}.contact{min-height:60svh}}
+/* about on request */
+.about-btn{pointer-events:auto;margin-top:22px;font:600 14px "Space Grotesk",sans-serif;color:var(--ink);background:var(--card);border:1.5px solid color-mix(in srgb,var(--ink) 22%,transparent);border-radius:999px;padding:10px 20px;cursor:pointer;transition:border-color .15s,transform .15s}
+.about-btn:hover{border-color:var(--ink);transform:translateY(-1px)}
+.abm{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;background:color-mix(in srgb,var(--ink) 38%,transparent);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.abm.open{display:flex;animation:abin .25s ease}
+@keyframes abin{from{opacity:0}}
+.abm-card{position:relative;background:var(--paper);color:var(--ink);border:1px solid color-mix(in srgb,var(--ink) 15%,transparent);border-radius:24px;max-width:640px;width:100%;max-height:88svh;overflow-y:auto;padding:32px 30px 30px;box-shadow:0 24px 60px color-mix(in srgb,var(--ink) 25%,transparent);animation:abup .3s ease}
+@keyframes abup{from{transform:translateY(18px)}}
+.abm-card h2{font-family:"Fraunces",serif;font-size:clamp(28px,5vw,42px);margin:8px 0 16px;letter-spacing:-.02em}
+.abm-card p{font-size:16.5px;line-height:1.65;margin:0 0 12px}
+.abm-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--ink) 22%,transparent);background:var(--card);color:var(--ink);font-size:15px;cursor:pointer}
+.abm-close:hover{border-color:var(--ink)}
+.abm .ab-path{margin-top:20px}
+@media (max-width:600px){.abm{align-items:flex-end;padding:0}.abm-card{border-radius:24px 24px 0 0;max-height:90svh;padding:28px 22px 34px}}
+@media (prefers-reduced-motion:reduce){.abm.open,.abm-card{animation:none}}
+/* project cards */
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media (max-width:760px){.pgrid{grid-template-columns:1fr}}
+.pcard{display:flex;flex-direction:column;border:1px solid color-mix(in srgb,var(--ink) 15%,transparent);border-radius:22px;overflow:hidden;background:var(--card);text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;cursor:pointer}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px color-mix(in srgb,var(--ink) 12%,transparent)}
+.pcover{aspect-ratio:16/10;display:grid;place-items:center;overflow:hidden;position:relative}
+.pc1{background:color-mix(in srgb,var(--accent) 16%,var(--paper));transition:background .35s}
+.pf{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;padding:18px;font-weight:600;font-size:clamp(12px,1.6vw,16px)}
+.pchip{padding:8px 12px;border-radius:10px;background:var(--card);border:1px solid color-mix(in srgb,var(--ink) 15%,transparent)}
+.pchip.op{background:transparent;border-style:dashed}
+.pchip.res{background:var(--accent);color:var(--on-accent);border-color:transparent;transition:background .35s}
+.pe{color:var(--muted)}
+.pc2{background:radial-gradient(120% 120% at 0% 0%,#4a2fd8 0%,transparent 55%),radial-gradient(120% 120% at 100% 100%,#0fa896 0%,transparent 55%),#070b1d}
+.pdark{display:flex;gap:14px;align-items:center;color:#fff;font-weight:800;font-size:clamp(20px,3vw,32px);letter-spacing:-.02em}
+.pdark i{font-style:normal;opacity:.6}
+.pdark .ai{background:linear-gradient(90deg,#c4b5ff,#8ff0e0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pc3{background:color-mix(in srgb,var(--ink) 6%,var(--card))}
+.pbody{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px}
+.pmeta{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.pbody h3{font-family:"Fraunces",serif;font-size:26px;margin:0;line-height:1.15}
+.pbody p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
+.ptags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.pcard .tag{font-size:12px;border:1px solid color-mix(in srgb,var(--ink) 22%,transparent);border-radius:999px;padding:3px 10px}
+.pcard .tag.open{border-color:transparent;background:var(--accent);color:var(--on-accent);font-weight:700}
+.pcard.soon{filter:blur(5px);opacity:.6;pointer-events:none;user-select:none;-webkit-user-select:none}
+/* petals version */
+.hint{display:none}
+.tray{display:none}
+.petal{position:absolute;z-index:4;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;display:grid;place-items:center;-webkit-tap-highlight-color:transparent}
+.petal .pt{display:block;width:22px;height:34px;background:var(--c);border-radius:50% 50% 50% 50%/70% 70% 30% 30%;transform:rotate(var(--rot,0deg));scale:0;transition:scale .25s,box-shadow .2s,filter .2s}
+.petal.in .pt{animation:ptin .55s cubic-bezier(.3,1.5,.5,1) forwards;animation-delay:calc(var(--i) * 100ms + 500ms)}
+.petal.done .pt{animation:none;scale:1}
+.petal.done:hover .pt{scale:1.2;filter:brightness(1.08)}
+.petal.on{z-index:5}
+.petal.on .pt{scale:1.25;box-shadow:0 0 0 5px color-mix(in srgb,var(--c) 28%,transparent)}
+@keyframes ptin{to{scale:1}}
+.pl{position:absolute;top:100%;left:50%;transform:translateX(-50%);font-size:11px;font-weight:500;color:var(--muted);white-space:nowrap;display:none;pointer-events:none;margin-top:-6px}
+@media (min-width:900px){.pl{display:block}}
+.mandala svg{opacity:.2}
+.copy{transition:opacity .25s}
+.stage.lesson-open .copy{opacity:.08}
+.stage.lesson-open .about-btn{pointer-events:none}
 </style>
 </head>
 <body>
@@ -358,13 +434,15 @@ h1{font-size:clamp(40px,7.5vw,96px)}
   <nav class="social" aria-label="Social links">
     <a href="https://www.linkedin.com/in/eshitagupta/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
     <a href="https://x.com/eshita_on_job" target="_blank" rel="noopener" aria-label="X" title="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+    <a href="https://www.instagram.com/eshitacreatives" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
   </nav>
   <button class="soundbtn" id="snd" aria-label="Sound on or off" title="Sound"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z" fill="currentColor"/><path class="waves" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/><path class="x" d="M16 9l6 6M22 9l-6 6"/></svg></button>
   <div class="mandala" id="mandala" aria-hidden="true"></div>
   <div class="copy">
     <div class="eyebrow">Product designer · Bengaluru</div>
     <h1>Hi, I’m <em id="name">Eshita</em>.</h1>
-    <p class="sub">I design AI workflows that quietly fix the everyday problems tech teams put up with. Kanpur-born, south-settled, easily excited by new things. Play with my desk first.</p>
+    <p class="sub">I design AI workflows that quietly fix the everyday problems tech teams put up with. Kanpur-born, south-settled, easily excited by new things. Tap a petal to hear a note and read what that place taught me.</p>
+    <button class="about-btn" id="open-about" type="button">About me</button>
     <button class="cta" id="cta">See the work ↓</button>
   </div>
 
@@ -379,13 +457,35 @@ h1{font-size:clamp(40px,7.5vw,96px)}
 
 
 
+<div class="abm" id="about-modal" role="dialog" aria-modal="true" aria-label="About Eshita" aria-hidden="true">
+  <div class="abm-card">
+    <button class="abm-close" type="button" data-close-about aria-label="Close">✕</button>
+  <span class="ab-k">About</span>
+  <h2>A little about me</h2>
+  <p>I started as a web designer in Lucknow, after a B.Tech in IT from Kanpur. I moved south, to Chennai and then Bengaluru in 2016, and I have stayed curious about new technology ever since.</p>
+  <p>Along the way I led UX for a few products, ran my own small design studio, and led design at HCL. For the last few years I have been a Staff Product Designer at Intuit, designing AI products for data scientists and ML engineers.</p>
+  <p>I mentor designers on ADPList, and I am studying design and psychology alongside work.</p>
+  <div class="ab-path" aria-label="Where I have worked"><span>Kanpur · B.Tech</span><i>→</i><span>Lucknow · 2013</span><i>→</i><span>Chennai · 2015</span><i>→</i><span>Bengaluru · 2016 to now</span></div>
+
+  </div>
+</div>
+
 <section class="work" id="work">
   <h2>Selected work</h2>
-  <p>One story on how I think. More on the way.</p>
-  <div class="grid">
-    <a class="card live" id="open-case" href="#calculated-fields"><div><div class="n">CASE 01</div><h3>From export to equation</h3><p class="cs">Designing calculated fields so finance teams can do the math inside the report, not in a spreadsheet.</p></div><div><span class="tag">Research</span><span class="tag">Interaction design</span><span class="tag">B2B</span><span class="tag open">Open case study ↗</span></div></a>
-    <article class="card soon"><div><div class="n">CASE 02 · IN PROGRESS</div><h3>Case study two</h3></div><div><span class="tag">AI</span><span class="tag">Workflows</span></div></article>
-    <article class="card soon"><div><div class="n">CASE 03 · IN PROGRESS</div><h3>Case study three</h3></div><div><span class="tag">Systems</span></div></article>
+  <p>One shipped, one concept, one on the way. Tap a card to open it.</p>
+  <div class="pgrid">
+    <a class="pcard" id="open-case" href="#calculated-fields">
+      <div class="pcover pc1"><div class="pf"><span class="pchip">Gross profit</span><span class="pchip op">÷</span><span class="pchip">Total income</span><span class="pe">=</span><span class="pchip res">Profit margin %</span></div></div>
+      <div class="pbody"><div class="pmeta">Case study 01 · 2025 · Lead product designer</div><h3>From export to equation</h3><p>Designing calculated fields so finance teams can do the math inside the report, not in a spreadsheet.</p><div class="ptags"><span class="tag">Research</span><span class="tag">Interaction design</span><span class="tag">B2B</span><span class="tag open">Open case study ↗</span></div></div>
+    </a>
+    <a class="pcard" id="open-next" href="#calculated-fields">
+      <div class="pcover pc2"><div class="pdark"><span>Before AI</span><i>→</i><span class="ai">With AI</span></div></div>
+      <div class="pbody"><div class="pmeta">Concept 02 · Design and prototype</div><h3>What if you just asked?</h3><p>A concept where you describe a calculation in a sentence, and AI writes the formula, asks when a term is ambiguous, and shows its working.</p><div class="ptags"><span class="tag">AI</span><span class="tag">Prototype</span><span class="tag open">Watch the trailer ↗</span></div></div>
+    </a>
+    <article class="pcard soon">
+      <div class="pcover pc3"></div>
+      <div class="pbody"><div class="pmeta">Case study 03 · In progress</div><h3>Case study three</h3><p>On the way.</p></div>
+    </article>
   </div>
 </section>
 
@@ -397,6 +497,17 @@ h1{font-size:clamp(40px,7.5vw,96px)}
     <div class="books" id="books"></div>
     <div class="booknotes" id="booknotes" aria-live="polite"></div>
   </section>
+
+<section class="contact" id="contact">
+  <h2>Let’s talk</h2>
+  <p>I’m open to new roles and to conversations about AI product design. Email is the fastest way to reach me.</p>
+  <div class="ct-row">
+    <a class="ct-main" href="mailto:eshitav2@gmail.com">eshitav2@gmail.com</a>
+    <a class="ct-sec" href="Eshita-Gupta-Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+  </div>
+  <p class="ct-links"><a href="https://www.linkedin.com/in/eshitagupta/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://x.com/eshita_on_job" target="_blank" rel="noopener">X</a> · <a href="https://www.instagram.com/eshitacreatives" target="_blank" rel="noopener">Instagram</a></p>
+  <p class="ct-foot">Made in Bengaluru</p>
+</section>
 
 <div class="csm" id="cs-modal" role="dialog" aria-modal="true" aria-label="Case study: From export to equation" aria-hidden="true">
   <div class="cs-bar"><button class="cs-close" data-close type="button">← Back to portfolio</button><span class="cs-bartitle">Case study 01</span></div>
@@ -778,7 +889,7 @@ h1{font-size:clamp(40px,7.5vw,96px)}
   function completeFlourish(){
     sfx.win();
     tone(SA[0],1.8,'sine',.06,0,1.0);tone(SA[4],1.8,'sine',.04,0,1.0);tone(SA[7],1.8,'sine',.05,0,1.0);
-    [].forEach.call(tray.children,function(b,i){b.animate([{transform:'scale(1)'},{transform:'scale(1.6)'},{transform:'scale(1)'}],{duration:500,delay:i*110})});
+    petalEls.forEach(function(p,i){p.firstChild.animate([{scale:1},{scale:1.7},{scale:1}],{duration:500,delay:i*110})});
     var el=document.getElementById('swara');
     el.innerHTML='<b>Sa → Sa</b> · aroha complete';el.classList.add('show');
     clearTimeout(showSwara.t);showSwara.t=setTimeout(function(){el.classList.remove('show')},3800);
@@ -823,6 +934,7 @@ h1{font-size:clamp(40px,7.5vw,96px)}
   STICKERS.push(['🌳','Bengaluru','alt big']);
   STICKERS.push(['🕌','Lucknow','']);
   if(window.innerWidth<600){STICKERS=STICKERS.filter(function(s){return LESSONS[s[1]]})}
+  STICKERS=[];
   STICKERS.forEach(function(s,i){
     var el=document.createElement('div');
     el.className='sticker '+(s[2]||(i%5===0?'alt':''))+(LESSONS[s[1]]?' has':'');
@@ -957,7 +1069,7 @@ h1{font-size:clamp(40px,7.5vw,96px)}
   ];
   var stamps=[];
   stage.addEventListener('pointerdown',function(e){
-    if(e.target.closest('.sticker,.dock,.cta,.lesson'))return;
+    if(e.target.closest('.sticker,.dock,.cta,.lesson,.petal,.about-btn'))return;
     closeLesson();
     var r=stage.getBoundingClientRect(),d=document.createElement('div');
     d.className='stamp';d.innerHTML=motifs[Math.floor(Math.random()*motifs.length)];
@@ -972,13 +1084,13 @@ h1{font-size:clamp(40px,7.5vw,96px)}
     closeLesson();
     sfx.whoosh();
     stamps.forEach(function(s){s.remove()});stamps.length=0;
-    bloom();var m=document.getElementById('mandala');m.classList.remove('sweep');void m.offsetWidth;m.classList.add('sweep');
+    bloomPetals();var m=document.getElementById('mandala');m.classList.remove('sweep');void m.offsetWidth;m.classList.add('sweep');
     setTimeout(function(){b.classList.remove('spin')},700);
   });
 
   /* ---- lessons: what each place taught me ---- */
   var cardEl=null;
-  function closeLesson(){if(cardEl){cardEl.remove();cardEl=null}}
+  function closeLesson(){if(cardEl){cardEl.remove();cardEl=null}[].forEach.call(document.querySelectorAll('.petal.on'),function(p){p.classList.remove('on')});stage.classList.remove('lesson-open')}
   function openLesson(it){
     var L=LESSONS[it.name];closeLesson();if(!L)return;
     var c=document.createElement('div');c.className='lesson';
@@ -1071,12 +1183,13 @@ h1{font-size:clamp(40px,7.5vw,96px)}
     if(!modal||!tile)return;
     var HASH='#calculated-fields';
     function isOpen(){return modal.classList.contains('open')}
-    function openCase(){
+    function openCase(target){
       last=document.activeElement;
       modal.classList.add('open');modal.setAttribute('aria-hidden','false');modal.scrollTop=0;
       document.documentElement.style.overflow='hidden';
       var c=modal.querySelector('.cs-close');if(c)c.focus({preventScroll:true});
       if(location.hash!==HASH){try{history.replaceState(null,'',HASH)}catch(e){location.hash=HASH.slice(1)}}
+      if(typeof target==='string'){setTimeout(function(){var el=document.getElementById(target);if(el)modal.scrollTop=Math.max(0,el.offsetTop-56)},60)}
     }
     function closeCase(){
       modal.classList.remove('open');modal.setAttribute('aria-hidden','true');
@@ -1085,6 +1198,8 @@ h1{font-size:clamp(40px,7.5vw,96px)}
       if(last&&last.focus)last.focus({preventScroll:true});
     }
     tile.addEventListener('click',function(e){e.preventDefault();openCase()});
+    var tile2=document.getElementById('open-next');
+    if(tile2)tile2.addEventListener('click',function(e){e.preventDefault();openCase('cs-next')});
     [].forEach.call(modal.querySelectorAll('[data-close]'),function(b){b.addEventListener('click',closeCase)});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&isOpen())closeCase()});
     window.addEventListener('hashchange',function(){
@@ -1147,6 +1262,79 @@ h1{font-size:clamp(40px,7.5vw,96px)}
       if(on){fig.setAttribute('data-focus','0');cap.textContent=caps[0]}
       else{b.setAttribute('aria-pressed','true');fig.setAttribute('data-focus',s);cap.textContent=caps[s]}
     })});
+  })();
+
+  /* ---- petals: each one is a place, a colour and a swara ---- */
+  var PETALS=['Kanpur','Lucknow','Bengaluru','Kashmir','Kedarkantha','Spiti','Ladakh','Jaisalmer'];
+  var petalEls=[];
+  PETALS.forEach(function(name,i){
+    var b=document.createElement('button');
+    b.className='petal';b.type='button';
+    b.setAttribute('aria-label',name+', '+SW[i][0]+', '+SW[i][1]);
+    b.title=name+' \u00b7 '+SW[i][0];
+    b.style.setProperty('--c',COLORS[i][1]);b.style.setProperty('--i',i);
+    b.innerHTML='<span class="pt"></span><span class="pl"></span>';
+    b.lastChild.textContent=name;
+    b.firstChild.addEventListener('animationend',function(){b.classList.add('done')});
+    b.addEventListener('click',function(e){e.stopPropagation();setColor(i);openPetal(i)});
+    stage.appendChild(b);petalEls.push(b);
+  });
+  function layoutPetals(){
+    measure();
+    var cx=W/2,cy=floor/2+8,wide=W>=900;
+    var rx=wide?W/2-130:W/2-26,ry=wide?cy-70:cy-96;
+    petalEls.forEach(function(p,i){
+      var deg=-22.5+i*45,th=deg*Math.PI/180;
+      p.style.left=(cx+rx*Math.sin(th)-22)+'px';
+      p.style.top=(cy-ry*Math.cos(th)-22)+'px';
+      p.firstChild.style.setProperty('--rot',deg+'deg');
+    });
+  }
+  function bloomPetals(){
+    petalEls.forEach(function(p){p.classList.remove('in','done')});
+    void stage.offsetWidth;
+    petalEls.forEach(function(p){p.classList.add(reduce?'done':'in')});
+  }
+  function openPetal(i){
+    var name=PETALS[i],L=LESSONS[name];
+    closeLesson();
+    petalEls.forEach(function(p,j){p.classList.toggle('on',j===i)});
+    if(!L)return;
+    var c=document.createElement('div');c.className='lesson';
+    c.innerHTML='<div class="k"></div><p class="t"></p><p class="b"></p>';
+    c.querySelector('.k').textContent=name+' \u00b7 '+SW[i][0];
+    c.querySelector('.t').textContent=L[0];
+    c.querySelector('.b').textContent=L[1];
+    stage.appendChild(c);cardEl=c;
+    var hh=c.offsetHeight;
+    c.style.left=(W/2-125)+'px';
+    c.style.top=Math.max(56,(floor/2+8)-hh/2)+'px';
+    stage.classList.add('lesson-open');
+  }
+  (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(function(){layoutPetals();bloomPetals()});
+  window.addEventListener('resize',layoutPetals);
+
+  /* ---- about on request ---- */
+  (function(){
+    var m=document.getElementById('about-modal'),btn=document.getElementById('open-about'),last=null,H='#about';
+    if(!m||!btn)return;
+    function isOpen(){return m.classList.contains('open')}
+    function openAbout(){
+      last=document.activeElement;m.classList.add('open');m.setAttribute('aria-hidden','false');
+      var c=m.querySelector('.abm-close');if(c)c.focus({preventScroll:true});
+      if(location.hash!==H){try{history.replaceState(null,'',H)}catch(e){location.hash='about'}}
+    }
+    function closeAbout(){
+      m.classList.remove('open');m.setAttribute('aria-hidden','true');
+      if(location.hash===H){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){location.hash=''}}
+      if(last&&last.focus)last.focus({preventScroll:true});
+    }
+    btn.addEventListener('click',openAbout);
+    m.addEventListener('click',function(e){if(e.target===m)closeAbout()});
+    [].forEach.call(m.querySelectorAll('[data-close-about]'),function(b){b.addEventListener('click',closeAbout)});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&isOpen())closeAbout()});
+    window.addEventListener('hashchange',function(){if(location.hash===H){if(!isOpen())openAbout()}else if(isOpen())closeAbout()});
+    if(location.hash===H)openAbout();
   })();
 
   /* ---- mandala drawing ---- */
