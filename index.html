@@ -127,6 +127,9 @@ h1 em{font-style:italic;font-weight:600;background:linear-gradient(transparent 6
 .swara b{color:var(--ink);font-weight:700}
 .swara .dv{font-family:"Noto Sans Devanagari","Space Grotesk",sans-serif;color:var(--ink);margin:0 1px}
 #count{display:none}
+.sticker.has::after{animation:none}
+.stamp{opacity:.5}
+@media (max-width:600px){.stamp svg{width:30px;height:auto}}
 .cta{display:none}
 .work{position:relative}
 .work h2,.work>p,.work .grid{filter:blur(7px);opacity:.75;pointer-events:none;user-select:none;-webkit-user-select:none}
@@ -392,7 +395,7 @@ h1 em{font-style:italic;font-weight:600;background:linear-gradient(transparent 6
   STICKERS=STICKERS.filter(function(s){return KEEP[s[1]]});
   STICKERS.push(['🌳','Bengaluru','alt big']);
   STICKERS.push(['🕌','Lucknow','']);
-  if(window.innerWidth<600){STICKERS=STICKERS.filter(function(s){return LESSONS[s[1]]||s[1]==='Goa'||s[1]==='Product design'})}
+  if(window.innerWidth<600){STICKERS=STICKERS.filter(function(s){return LESSONS[s[1]]})}
   STICKERS.forEach(function(s,i){
     var el=document.createElement('div');
     el.className='sticker '+(s[2]||(i%5===0?'alt':''))+(LESSONS[s[1]]?' has':'');
@@ -414,9 +417,36 @@ h1 em{font-style:italic;font-weight:600;background:linear-gradient(transparent 6
   (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(scatter);
   window.addEventListener('resize',function(){measure();layout();items.forEach(function(it){it.x=Math.min(it.x,W-it.w);it.y=Math.min(it.y,floor-it.h)})});
 
+  function separate(){
+    for(var a=0;a<items.length;a++){
+      for(var b=a+1;b<items.length;b++){
+        var A=items[a],B=items[b];
+        if(A.drag&&B.drag)continue;
+        var ox=Math.min(A.x+A.w,B.x+B.w)-Math.max(A.x,B.x);
+        var oy=Math.min(A.y+A.h,B.y+B.h)-Math.max(A.y,B.y);
+        if(ox<=0||oy<=0)continue;
+        var wa=A.drag?0:1,wb=B.drag?0:1;
+        if(oy<ox){
+          var up=A.y<B.y?A:B,low=up===A?B:A;
+          if(low.y+low.h>=floor-1&&!low.drag){if(low===A)wa=0;else wb=0}
+          var tot=wa+wb;if(!tot)continue;
+          var s=(A.y<B.y)?-1:1;
+          A.y+=s*oy*wa/tot;B.y-=s*oy*wb/tot;
+          var v=(A.vy+B.vy)*.15;if(!A.drag)A.vy=v;if(!B.drag)B.vy=v;
+        }else{
+          var tot2=wa+wb;if(!tot2)continue;
+          var s2=(A.x<B.x)?-1:1;
+          A.x+=s2*ox*wa/tot2;B.x-=s2*ox*wb/tot2;
+          var t0=A.vx;if(!A.drag)A.vx=B.vx*.6;if(!B.drag)B.vx=t0*.6;
+        }
+        A.x=Math.max(0,Math.min(W-A.w,A.x));B.x=Math.max(0,Math.min(W-B.w,B.x));
+        A.y=Math.min(A.y,floor-A.h);B.y=Math.min(B.y,floor-B.h);
+      }
+    }
+  }
   var last=performance.now();
   function tick(t){
-    var dt=Math.min(.033,(t-last)/1000);last=t;
+    var dt=Math.min(.033,(t-last)/1000);last=t;separate();separate();separate();
     items.forEach(function(it){
       if(!it.drag){
         if(gravity){it.vy+=1900*dt}
@@ -477,7 +507,8 @@ h1 em{font-style:italic;font-weight:600;background:linear-gradient(transparent 6
     d.className='stamp';d.innerHTML=motifs[Math.floor(Math.random()*motifs.length)];
     d.style.left=(e.clientX-r.left)+'px';d.style.top=(e.clientY-r.top)+'px';
     stage.insertBefore(d,stage.firstChild);stamps.push(d);sfx.stamp();
-    if(stamps.length>28){var o=stamps.shift();o.style.opacity=0;setTimeout(function(){o.remove()},1500)}
+    setTimeout(function(){d.style.opacity=0;setTimeout(function(){d.remove()},1600)},2200);
+    if(stamps.length>6){var o=stamps.shift();o.style.opacity=0;setTimeout(function(){o.remove()},1500)}
   });
 
   document.getElementById('refresh').addEventListener('click',function(){
