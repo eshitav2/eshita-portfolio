@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Portfolio stats</title>
+<style>
+:root{--paper:#FBF4E6;--ink:#1E1B16;--card:#fff;--muted:#6a6358;--line:#e3dac6;--accent:#E63B2E}
+@media (prefers-color-scheme:dark){:root{--paper:#17140F;--ink:#F6EEDC;--card:#26211A;--muted:#a89f8c;--line:#3a3328}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;padding:32px 20px 60px}
+main{max-width:560px;margin:0 auto}h1{font-family:Georgia,serif;font-size:34px;margin:0 0 6px}
+p{color:var(--muted);line-height:1.5}.grid{display:grid;gap:12px;margin:22px 0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.row b{font-family:Georgia,serif;font-size:34px;line-height:1}.row span{font-size:15px}.row small{display:block;color:var(--muted);margin-top:2px}
+button{font:600 14px system-ui;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:10px 18px;cursor:pointer}
+.err{color:var(--accent)}
+</style></head><body><main>
+<h1>Portfolio stats</h1>
+<p>Private page. Don't link to it. Your own visits aren't counted once you've opened the portfolio with <code>#me</code> on that browser.</p>
+<div class="grid" id="g"><div class="row"><span>Loading…</span></div></div>
+<button id="r">Refresh</button>
+<p id="e" class="err"></p>
+</main>
+<script>
+var L={views:['Site views','People who opened the portfolio'],'case-calculated-fields':['Case study 01 clicks','From export to equation'],'case-map-assist':['Case study 02 clicks','MAP Assist'],'concept-trailer':['Concept 03 clicks','What if you just asked? (trailer)']};
+function load(){
+  var g=document.getElementById('g'),e=document.getElementById('e');e.textContent='';
+  fetch('/api/views?all=1').then(function(r){return r.json()}).then(function(d){
+    if(!d||!d.counts){g.innerHTML='';e.textContent='No data yet. Connect the Upstash Redis store to this Vercel project, then redeploy.';return}
+    g.innerHTML='';
+    Object.keys(L).forEach(function(k){
+      var row=document.createElement('div');row.className='row';
+      row.innerHTML='<div><span></span><small></small></div><b></b>';
+      row.querySelector('span').textContent=L[k][0];row.querySelector('small').textContent=L[k][1];
+      row.querySelector('b').textContent=(d.counts[k]||0).toLocaleString('en-IN');
+      g.appendChild(row);
+    });
+  }).catch(function(){e.textContent='Could not load stats.'});
+}
+document.getElementById('r').onclick=load;load();
+</script></body></html>
